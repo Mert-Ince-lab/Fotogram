@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fotogram</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
     <link rel="icon" type="image/x-icon" href="./favicon.png">
 </head>
 
@@ -16,30 +17,31 @@
 <body onclick="console.log('bodyclick')">
     <header>
         <h1 class="media-h1">Your personal photo album</h1>
-        </header>
+    </header>
 
     <main>
-        <!-- <button aria-haspopup="dialog" aria-controls="myDialog" onclick="openDialog()"></button>
-        <dialog id="myDialog" aria-labelledby="dialogTitel" aria-describedby="">
-        <img id="dialog" src="./city-9169729_1280.jpg" alt="">
-        </dialog> -->
-        <img onclick="logUp()" onclick="logDownWBubblingProtection(event)" src="./leaves-4702127_1280.jpg" alt="">
-        <img class="city" src="./city-9169729_1280.jpg" alt="">
-        <img src="./fallow-deer-9903609_1280.jpg" alt="">
-        <img src="./river-6175173_1280.jpg" alt="">
-        <img src="./sunset-7133867_1280.jpg" alt="">
-        <img class="nature" src="./nature-6766923_1280.jpg" alt="">
-        <img src="./NYC-3875817_1280.jpg" alt="">
-        <a href="https://f017471e@mert-ince.developerakademie.net/Fotogram/index.html">
-            <img src="./forest-2942477_1280.jpg" alt=""></a>
-        <img class="desk" src="./desk-3139127_1280.jpg" alt="">
-
-        
+        <div class="galerie">
+            <img src="./leaves-4702127_1280.jpg" alt="">
+            <img class="city" src="./city-9169729_1280.jpg" alt="">
+            <img src="./fallow-deer-9903609_1280.jpg" alt="">
+            <img src="./river-6175173_1280.jpg" alt="">
+            <img src="./sunset-7133867_1280.jpg" alt="">
+            <img class="nature" src="./nature-6766923_1280.jpg" alt="">
+            <img src="./NYC-3875817_1280.jpg" alt="">
+            <img src="./forest-2942477_1280.jpg" alt="">
+            <img class="desk" src="./desk-3139127_1280.jpg" alt="">
+        </div>
+        <div class="pop-up">
+            <button class="close"></button>
+            <img src="" alt="">
+            <button class="arrow-left"></button>
+            <button class="arrow-right"></button>
+        </div>
     </main>
 
     <footer class="footer">
-        
+
     </footer>
 </body>
-^<script src="script.js"></script>
+
 </html>

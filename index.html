@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fotogram</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
     <link rel="icon" type="image/x-icon" href="./favicon.png">
 </head>
 
@@ -20,7 +19,7 @@
     </header>
 
     <main>
-        <div class="galerie">
+        <div id="my-pics" onclick="openDialog(myDialog)" class="galerie">
             <img src="./leaves-4702127_1280.jpg" alt="">
             <img class="city" src="./city-9169729_1280.jpg" alt="">
             <img src="./fallow-deer-9903609_1280.jpg" alt="">
@@ -31,10 +30,21 @@
             <img src="./forest-2942477_1280.jpg" alt="">
             <img class="desk" src="./desk-3139127_1280.jpg" alt="">
         </div>
-      
-    </main>
+        <dialog id="myDialog">
+            <h2>Leaves</h2>
 
-    <footer></footer>
+            <section>
+                <img src="./leaves-4702127_1280.jpg" alt="">
+            </section>
+
+            <footer>
+                <button onclick="myDialog.close()" >Schließen</button>
+            </footer>
+        </dialog>
+    </main>
+    <footer class="footer"></footer>
+
+    <script src="script.js"></script>
 </body>
 
 </html>

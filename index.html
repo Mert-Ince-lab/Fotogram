@@ -9,30 +9,34 @@
     <link rel="icon" type="image/x-icon" href="./favicon.png">
 </head>
 
-<nav>
-    <img class="logo" src="./Fotogram_Logo.svg" alt="">
-</nav>
-
 <body onload="init()">
+
+    <nav>
+        <img class="logo" src="./Fotogram_Logo.svg" alt="">
+    </nav>
+
     <header>
         <h1 class="media-h1">Your personal photo album</h1>
     </header>
 
     <main>
         <div id="image-container" class="galerie"></div>
-        
+
         <dialog id="myDialog">
-
-            <h2>Leaves</h2>
-
+ 
             <section>
-                 <img id="dialog-image" src="" alt="">
+                <img id="dialogImage" src="" alt="">
             </section>
+            
+            <button class="arrow-left" onclick="previousImage()">&#8592;</button>
+            <img id="dialogImage" src="" style="max-width:80vw; max-height:80vh;">
+            <button class="arrow-right" onclick="nextImage()">&#8594;</button>
 
-            <footer>
-                <button onclick="myDialog.close()">Schließen</button>
-            </footer>
+            <button class="close-btn" onclick="myDialog.close()">✕</button>
+
+        </dialog>
     </main>
+
     <footer class="footer"></footer>
 
     <script src="script.js"></script>

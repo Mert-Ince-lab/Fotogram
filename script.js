@@ -1,9 +1,4 @@
-
-
-function openDialog(src) {
-    document.getElementById("dialogImage") .src = src;
-    myDialog.showModal()
-}
+let currentIndex = 0;
 
 let myDialog = document.getElementById("myDialog");
 
@@ -19,14 +14,48 @@ let images = [
     "./desk-3139127_1280.jpg",
 ];
 
+function updateDialogImage() {
+    const dialogImage = document.getElementById('dialogImage');
+    dialogImage.src = images[currentIndex];
+}
+
+
+function openDialog(index) {
+    currentIndex = index;
+    updateDialogImage();
+    myDialog.showModal();
+}
+
+
+function previousImage() {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    updateDialogImage();
+}
+
+
+function nextImage() {
+    currentIndex = (currentIndex + 1) % images.length;
+    updateDialogImage();
+}
+
+
 function renderImages() {
     let imageContainer = document.getElementById('image-container');
 
     for (let index = 0; index < images.length; index++) {
-        imageContainer.innerHTML += `<img src="${images[index]}" onclick="openDialog(myDialog)">`;
+        imageContainer.innerHTML += 
+            `<img src="${images[index]}" onclick="openDialog(${index})">`;
     }
 }
 
 function init() {
     renderImages();
 }
+
+myDialog.addEventListener('click', (event) => {
+    if (event.target === myDialog) {
+        myDialog.close();
+    }
+});
+
+init();

@@ -42,7 +42,7 @@ img {
     align-items: center;
     flex-wrap: wrap;
     gap: 10px;
-    
+
 }
 
 .desk {
@@ -53,8 +53,82 @@ img {
     width: 225px;
 }
 
-#myDialog{
+#myDialog {
     background-color: #0A222C;
+    position: relative;
+    padding: 1.5;
+}
+
+.close-btn {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.dialog-content {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dialog-content img {
+    max-width: 80vw;
+    max-height: 80vh;
+    border-radius: 10px;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.3);
+    border: none;
+    font-size: 2rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 5px;
+    z-index: 10;
+}
+
+.arrow.left {
+    left: 10px;
+}
+
+.arrow.right {
+    right: 10px;
+    display: flex;
+    justify-content: right;
+}
+
+.arrow:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.close-btn:hover {
+    opacity: 0.7;
+    color: white;
+}
+
+.close-btn:focus,
+.close-btn:focus-visible {
+    outline: none;
+    box-shadow: none;
+}
+
+#myDialog::backdrop {
+    background: rgba(0, 0, 0, 0);
+    transition: 0.3s ease;
+}
+
+#myDialog[open]::backdrop {
+    background: rgba(0, 0, 0, 0.6);
 }
 
 .footer {

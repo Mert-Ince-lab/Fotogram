@@ -14,9 +14,21 @@ let images = [
     "./desk-3139127_1280.jpg",
 ];
 
+let titles = [
+    "Frozen Leave",
+    "City in the Mountain",
+    "Fallow Deer",
+    "City ​​around a river",
+    "Sunset",
+    "Nature",
+    "New York",
+    "Forest",
+    "Desk with lots of Work"
+];
+
 function updateDialogImage() {
-    const dialogImage = document.getElementById('dialogImage');
-    dialogImage.src = images[currentIndex];
+    document.getElementById("dialogImage").src = images[currentIndex];
+    document.getElementById("dialogTitle").innerText = titles[currentIndex];
 }
 
 
@@ -43,7 +55,7 @@ function renderImages() {
     let imageContainer = document.getElementById('image-container');
 
     for (let index = 0; index < images.length; index++) {
-        imageContainer.innerHTML += 
+        imageContainer.innerHTML +=
             `<img src="${images[index]}" onclick="openDialog(${index})">`;
     }
 }

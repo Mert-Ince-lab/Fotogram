@@ -42,7 +42,6 @@ img {
     align-items: center;
     flex-wrap: wrap;
     gap: 10px;
-
 }
 
 .desk {
@@ -53,12 +52,19 @@ img {
     width: 225px;
 }
 
+.galerie img {
+    height: 100px;
+    width: 140px;
+    margin-top: 10px;
+}
+
+
 #myDialog {
     background-color: #0A222C;
     position: relative;
-    padding: 1.5;
+    padding: 24px;
     opacity: 0;
-    transition: opacity 10s ease;
+    transition: opacity 0.3s ease;
 }
 
 #myDialog[open] {
@@ -76,19 +82,6 @@ img {
     cursor: pointer;
 }
 
-.dialog-content {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.dialog-content img {
-    max-width: 80vw;
-    max-height: 80vh;
-    border-radius: 10px;
-}
-
 .arrow {
     position: absolute;
     top: 50%;
@@ -104,11 +97,11 @@ img {
 }
 
 .arrow-left {
-    left: -60px;
+    
 }
 
 .arrow-right {
-    right: -60px;
+    
 }
 
 .arrow:hover {
@@ -128,7 +121,6 @@ img {
 
 #myDialog::backdrop {
     background: rgba(0, 0, 0, 0);
-    transition: 0.3s ease;
 }
 
 #myDialog[open]::backdrop {

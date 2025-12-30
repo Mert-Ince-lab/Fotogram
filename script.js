@@ -69,5 +69,3 @@ myDialog.addEventListener('click', (event) => {
         myDialog.close();
     }
 });
-
-init();

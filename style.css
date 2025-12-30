@@ -54,7 +54,7 @@ img {
 }
 
 .galerie img {
-    height: 140px;
+    height: 14;
     width: 160px;
     margin-top: 10px;
 }
@@ -97,13 +97,9 @@ img {
     cursor: pointer;
 }
 
-.arrow-left {
-    
-}
+.arrow-left {}
 
-.arrow-right {
-    
-}
+.arrow-right {}
 
 .arrow:hover {
     background-color: rgba(255, 255, 255, 0.7);
@@ -150,5 +146,9 @@ img {
 
     .media-h1 {
         font-size: 24px;
+    }
+
+    #myDialog {
+        width: 250px;
     }
 }

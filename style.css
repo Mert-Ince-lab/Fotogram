@@ -37,6 +37,7 @@ img {
 
 .galerie {
     margin-top: 30px;
+    padding: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -53,8 +54,8 @@ img {
 }
 
 .galerie img {
-    height: 100px;
-    width: 140px;
+    height: 140px;
+    width: 160px;
     margin-top: 10px;
 }
 

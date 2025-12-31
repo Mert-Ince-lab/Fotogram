@@ -25,12 +25,12 @@
         <dialog id="myDialog">
 
             <h2 id="dialogTitle"></h2>
- 
-            
-            <button class="arrow-left" onclick="previousImage()">&#8592;</button>
-            <img id="dialogImage" src="" style="max-width:80vw; max-height:80vh;">
-            <button class="arrow-right" onclick="nextImage()">&#8594;</button>
 
+            <div class="arrow-container">
+                <button class="arrow-btn" onclick="previousImage()">&#8592;</button>
+                <img id="dialogImage" src="" style="max-width:80vw; max-height:80vh;">
+                <button class="arrow-btn" onclick="nextImage()">&#8594;</button>
+            </div>
             <button class="close-btn" onclick="myDialog.close()">✕</button>
 
         </dialog>

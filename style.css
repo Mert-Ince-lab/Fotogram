@@ -54,7 +54,7 @@ img {
 }
 
 .galerie img {
-    height: 14;
+    height: 140px;
     width: 160px;
     margin-top: 10px;
 }
@@ -84,22 +84,32 @@ img {
 }
 
 .arrow {
-    position: absolute;
     top: 50%;
     transform: translateY(-50%);
     width: 48px;
     height: 48px;
     border-radius: 50%;
     border: none;
-    background: white;
+    background: #0A222C;
     color: black;
     font-size: 1.5rem;
     cursor: pointer;
 }
+.arrow-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
 
-.arrow-left {}
+.arrow-btn {
+    background: #808080;
+    border-radius: 20px;
+    padding: 8px 10px;
+    border: none;
+    cursor: pointer;
+}
 
-.arrow-right {}
 
 .arrow:hover {
     background-color: rgba(255, 255, 255, 0.7);
@@ -150,5 +160,9 @@ img {
 
     #myDialog {
         width: 250px;
+    }
+
+    img{
+        height: 115px;
     }
 }
